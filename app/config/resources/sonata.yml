@@ -1,5 +1,5 @@
 sonata_admin:
-    title:      Аудиогид Эрмитаж
+    title:      Backend Snadbox
     options:
         #use_select2: false
     security:
@@ -19,33 +19,21 @@ sonata_admin:
         blocks:
             # display a dashboard block
             - { position: left, type: sonata.admin.block.admin_list }
-        groups:
-            Infrastructure: ~
-            Guide: ~
-            Exhibit: ~
-            settings:
-                items:
-                    - sonata.user.admin.user
-                    - sonata.user.admin.group
-                    - armd.content.log.admin
-                    - sonata.media.admin.media
-                    - sonata.media.admin.gallery
     templates:
-        layout:  ArmdResourceBundle:Admin:standard_layout.html.twig
-        edit:    ArmdResourceBundle:Admin:edit.html.twig
+        edit:    SIPResourceBundle:Admin:edit.html.twig
 
 sonata_block:
     default_contexts: [cms]
     blocks:
         sonata.admin.block.admin_list:
             contexts:   [admin]
-
-        sonata.block.service.text:
-        sonata.block.service.action:
-        sonata.block.service.rss:
+        sonata.user.block.menu:
+        sonata.user.block.account:
+        sonata.admin.block.search_result:
+            contexts: [admin]
 
 sonata_doctrine_orm_admin:
     templates:
         form:
             - SonataDoctrineORMAdminBundle:Form:form_admin_fields.html.twig
-            - ArmdResourceBundle:Form:fields.html.twig
+            - SIPResourceBundle:Form:fields.html.twig

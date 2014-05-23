@@ -28,10 +28,13 @@
 
         "stof/doctrine-extensions-bundle":          "*",
 
-        "sonata-project/user-bundle":               "2.2.x-dev",
-        "sonata-project/doctrine-orm-admin-bundle": "2.2.x-dev",
+        "sonata-project/admin-bundle":              "2.3.x-dev",
+        "sonata-project/user-bundle":               "2.3.x-dev",
+        "sonata-project/doctrine-orm-admin-bundle": "2.3.x-dev",
+        "sonata-project/block-bundle":              "2.2.x-dev",
 
         "genemu/form-bundle":                       "2.2.*"
+        
     },
     "scripts": {
         "post-install-cmd": [

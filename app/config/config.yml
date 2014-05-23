@@ -3,7 +3,6 @@ imports:
     - { resource: security.yml }
     - { resource: resources/sonata.yml }
     - { resource: resources/user.yml }
-    - { resource: resources/media.yml }
 
 framework:
     esi:             ~
@@ -28,9 +27,6 @@ framework:
 twig:
     debug:            %kernel.debug%
     strict_variables: %kernel.debug%
-    form:
-        resources:
-            - 'SIPTranslationBundle:Form:fields.html.twig'
 
 # Assetic Configuration
 assetic:
@@ -82,26 +78,6 @@ stof_doctrine_extensions:
 
 genemu_form:
     select2: ~
-
-fos_rest:
-    routing_loader:
-        default_format: json
-        include_format: true
-    view:
-        failed_validation: HTTP_BAD_REQUEST
-    format_listener:
-        fallback_format: json
-        default_priorities:
-            - json
-            - html
-            - rss
-            - "*/*"
-    access_denied_listener:
-        json: true
-    exception:
-        codes:
-            'Symfony\Component\Routing\Exception\ResourceNotFoundException': 404
-            'Doctrine\ORM\OptimisticLockException': HTTP_CONFLICT
 
 sensio_framework_extra:
     view:    { annotations: false }
