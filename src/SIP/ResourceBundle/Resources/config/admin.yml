@@ -1,0 +1,9 @@
+parameters:
+    #sip.content.log.admin.class: SIP\ResourceBundle\Admin\ContentLogAdmin
+
+services:
+    #sip.content.log.admin:
+    #    class: %sip.content.log.admin.class%
+    #    tags:
+    #        - { name: sonata.admin, manager_type: orm, audit: false, group: settings, label: ContentLog }
+    #    arguments: [null, SIP\ResourceBundle\Entity\ContentLog, SonataAdminBundle:CRUD, @sonata.admin.pool]

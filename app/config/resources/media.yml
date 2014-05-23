@@ -1,0 +1,60 @@
+sonata_media:
+    default_context: default
+    db_driver: doctrine_orm
+    contexts:
+        default:
+            providers:
+                - sonata.media.provider.youtube
+                - sonata.media.provider.image
+                - sonata.media.provider.file
+
+            formats:
+                admin: { width: 75 , height: 60, , quality: 70}
+                small: { width: 100 , quality: 70}
+                big:   { width: 500 , quality: 70}
+
+        exhibit_photo:
+            providers:
+                - sonata.media.provider.image
+
+            formats:
+                admin: { width: 75 , height: 60, , quality: 70}
+                normal: { width: 160 , height: 248, quality: 70}
+
+        exhibit_icon:
+            providers:
+                - sonata.media.provider.image
+
+            formats:
+                admin: { width: 75 , height: 75, , quality: 70}
+                normal: { width: 160 , height: 248, quality: 70}
+
+        guide_image:
+            providers:
+                - sonata.media.provider.image
+
+            formats:
+                admin: { width: 75 , height: 75, , quality: 70}
+                normal: { width: 160 , height: 248, quality: 70}
+
+        guide_audio:
+            providers:
+                - sonata.media.provider.file
+
+            formats:
+                admin: { width: 75 , height: 75, , quality: 70}
+                normal: { width: 160 , height: 248, quality: 70}
+
+    cdn:
+        server:
+            path: /uploads/media # http://media.sonata-project.org/
+
+    filesystem:
+        local:
+            directory:  %kernel.root_dir%/../web/uploads/media
+            create:     true
+
+    class:
+        media: Armd\ResourceBundle\Entity\Media\Media
+        gallery: Armd\ResourceBundle\Entity\Media\Gallery
+        gallery_has_media: Armd\ResourceBundle\Entity\Media\GalleryHasMedia
