@@ -28,19 +28,18 @@ class AppKernel extends Kernel
 
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
 
-            new Genemu\Bundle\FormBundle\GenemuFormBundle(),
-
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Sonata\BlockBundle\SonataBlockBundle(),
             new Sonata\AdminBundle\SonataAdminBundle(),
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
             new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
-            new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
+            new Sonata\MediaBundle\SonataMediaBundle(),
             new Sonata\CoreBundle\SonataCoreBundle(),
+            new Sonata\ClassificationBundle\SonataClassificationBundle(),
 
-            new FOS\RestBundle\FOSRestBundle(),
-
-            new SIP\ResourceBundle\SIPResourceBundle()
+            new SIP\ResourceBundle\SIPResourceBundle(),
+            new SIP\MultipleUploadBundle\SIPMultipleUploadBundle(),
+            new SIP\LocationPickerBundle\SIPLocationPickerBundle()
         );
 
         if (in_array($this->getEnvironment(), array('dev'))) {

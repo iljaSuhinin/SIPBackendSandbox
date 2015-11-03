@@ -3,6 +3,8 @@ imports:
     - { resource: security.yml }
     - { resource: resources/sonata.yml }
     - { resource: resources/user.yml }
+    - { resource: resources/media.yml }
+
 
 framework:
     esi:             ~
@@ -32,7 +34,7 @@ twig:
 assetic:
     debug:          %kernel.debug%
     use_controller: false
-    bundles:        [ ]
+    bundles:        [ SIPResourceBundle ]
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
@@ -76,9 +78,6 @@ stof_doctrine_extensions:
             loggable: true
             sortable: true
 
-genemu_form:
-    select2: ~
-
 sensio_framework_extra:
-    view:    { annotations: false }
+    view:    { annotations: true }
     router:  { annotations: true }
