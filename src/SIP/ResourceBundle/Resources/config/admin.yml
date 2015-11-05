@@ -5,6 +5,7 @@ parameters:
     sip.resourse.meta.admin.class: SIP\ResourceBundle\Admin\MetaDataAdmin
     sip.resourse.meta.model.class: SIP\ResourceBundle\Entity\MetaData
 
+    sonata.user.admin.user.class: SIP\ResourceBundle\Admin\UserAdmin
 services:
     sip.resourse.setting.admin:
         class: %sip.resourse.setting.admin.class%
@@ -16,7 +17,7 @@ services:
         class: SIP\ResourceBundle\Admin\MetaDataAdmin
         arguments: [null, SIP\ResourceBundle\Entity\MetaData, null]
         tags:
-            - { name: sonata.admin, manager_type: orm, group: dict, label: MetaData }
+            - { name: sonata.admin, manager_type: orm, group: content, label: MetaData }
 
     sonata.media.admin.gallery:
         class: %sonata.media.admin.gallery.class%

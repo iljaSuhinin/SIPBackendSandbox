@@ -1,9 +1,7 @@
 <?php
-
 /*
  * (c) Suhinin Ilja <iljasuhinin@gmail.com>
  */
-
 namespace SIP\ResourceBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;

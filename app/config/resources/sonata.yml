@@ -19,6 +19,13 @@ sonata_admin:
         blocks:
             # display a dashboard block
             - { position: left, type: sonata.admin.block.admin_list }
+        groups:
+            sonata_user:
+                icon: '<i class="fa fa-users"></i>'
+            sonata_media:
+                icon: '<i class="fa fa-picture-o"></i>'
+            content: ~
+
     templates:
         layout: SIPResourceBundle:Admin:standard_layout.html.twig
         list:   SIPResourceBundle:Admin:list.html.twig

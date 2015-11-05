@@ -35,7 +35,6 @@ class AppKernel extends Kernel
             new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
             new Sonata\MediaBundle\SonataMediaBundle(),
             new Sonata\CoreBundle\SonataCoreBundle(),
-            new Sonata\ClassificationBundle\SonataClassificationBundle(),
 
             new SIP\ResourceBundle\SIPResourceBundle(),
             new SIP\MultipleUploadBundle\SIPMultipleUploadBundle(),
